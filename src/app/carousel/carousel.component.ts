@@ -21,11 +21,13 @@ export class CarouselComponent implements OnInit {
   wrapperLength = undefined;
   wrapperWidth = undefined;
 
+  grabbing: boolean = false;
+
   private last: MouseEvent;
 
   private mouseDown : boolean = false;
 
-  	private timer = null;
+  private timer = null;
 	private isIntervalSet = false;
 
 

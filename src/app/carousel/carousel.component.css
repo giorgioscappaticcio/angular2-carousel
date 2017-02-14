@@ -46,6 +46,14 @@
 	transition: transform .2s linear;
 }
 
+.carousel-wrapper-inner:hover {
+  cursor: grab;
+}
+
+.carousel-wrapper-inner.active {
+  cursor: grabbing;
+}
+
 .carousel-slider {
 	float: left;
 	width: 100%;	

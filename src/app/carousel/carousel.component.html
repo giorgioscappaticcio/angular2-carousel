@@ -1,5 +1,5 @@
 <div class="carousel-wrapper">
-	<div class="carousel-wrapper-inner" [ngStyle]="calcWrap()" [style.transform]="translateX" on-mousedown="down($event)" on-mouseup="up()" on-mousemove='over($event)'>
+	<div class="carousel-wrapper-inner" [ngClass]="{'active': mouseDown}" [ngStyle]="calcWrap()" [style.transform]="translateX" on-mousedown="down($event)" on-mouseup="up()" on-mousemove='over($event)' >
 	
 		<div *ngFor="let tile of tiles" class="placeholder">
 		  <img src="{{tile.featured_image.source}}" alt="">
