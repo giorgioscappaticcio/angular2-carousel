@@ -1,0 +1,27 @@
+<div class="carousel-wrapper">
+	<div class="carousel-wrapper-inner" [ngStyle]="calcWrap()" [style.transform]="translateX" on-mousedown="down($event)" on-mouseup="up()" on-mousemove='over($event)'>
+	
+		<div *ngFor="let tile of tiles" class="placeholder">
+		  <img src="{{tile.featured_image.source}}" alt="">
+		  {{tile.ID}}
+		  {{tile.title}}
+		</div>
+
+	</div>
+
+	<button class="arrow left" (click)="slidePrev('window')">Prev</button>
+	<button class="arrow right" (click)="slideNext('window')">Next</button>	
+</div>
+
+<div class="carousel-slider">
+	<div class="clm-50">
+		<input type="range" min="0" max="{{wrapperLength}}" [(ngModel)]="zoomLevel" #ctrl="ngModel" #ref (input)="changeZoom(ref.value)">
+	</div>
+	
+
+	
+
+</div>
+
+
+
